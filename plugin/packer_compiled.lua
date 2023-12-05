@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "C:\\Users\\Deshpande\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "C:\\Users\\Deshpande\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-pairs",
@@ -109,11 +114,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\Deshpande\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\Deshpande\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Deshpande\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
@@ -128,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Deshpande\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
-  },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "C:\\Users\\Deshpande\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -178,10 +173,36 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Deshpande\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  vimtex = {
+    config = { "\27LJ\2\nü\2\0\0\2\0\v\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0'\1\6\0=\1\5\0006\0\0\0009\0\1\0'\1\b\0=\1\a\0006\0\0\0009\0\1\0'\1\n\0=\1\t\0K\0\1\0\r--unique(vimtex_view_general_options_latexmk&--unique file:@pdf\\#src:@line@tex vimtex_view_general_options\bnvr\29vimtex_compiler_progname\24tex_comment_nospell\vokular\31vimtex_view_general_viewer\6g\bvim\0" },
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "C:\\Users\\Deshpande\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "tex" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: C:\Users\Deshpande\AppData\Local\nvim-data\site\pack\packer\opt\vimtex\ftdetect\cls.vim]], true)
+vim.cmd [[source C:\Users\Deshpande\AppData\Local\nvim-data\site\pack\packer\opt\vimtex\ftdetect\cls.vim]]
+time([[Sourcing ftdetect script at: C:\Users\Deshpande\AppData\Local\nvim-data\site\pack\packer\opt\vimtex\ftdetect\cls.vim]], false)
+time([[Sourcing ftdetect script at: C:\Users\Deshpande\AppData\Local\nvim-data\site\pack\packer\opt\vimtex\ftdetect\tex.vim]], true)
+vim.cmd [[source C:\Users\Deshpande\AppData\Local\nvim-data\site\pack\packer\opt\vimtex\ftdetect\tex.vim]]
+time([[Sourcing ftdetect script at: C:\Users\Deshpande\AppData\Local\nvim-data\site\pack\packer\opt\vimtex\ftdetect\tex.vim]], false)
+time([[Sourcing ftdetect script at: C:\Users\Deshpande\AppData\Local\nvim-data\site\pack\packer\opt\vimtex\ftdetect\tikz.vim]], true)
+vim.cmd [[source C:\Users\Deshpande\AppData\Local\nvim-data\site\pack\packer\opt\vimtex\ftdetect\tikz.vim]]
+time([[Sourcing ftdetect script at: C:\Users\Deshpande\AppData\Local\nvim-data\site\pack\packer\opt\vimtex\ftdetect\tikz.vim]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

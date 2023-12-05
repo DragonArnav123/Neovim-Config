@@ -1,5 +1,6 @@
 require('gitsigns').setup {
   signs = {
+    add			 = { hl = 'GitSignsAdd', text = '+', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
     delete       = { hl = 'GitSignsDelete', text = '_', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
     topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
     changedelete = { hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
@@ -7,8 +8,8 @@ require('gitsigns').setup {
   },
   signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
   numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
-  linehl     = true, -- Toggle with `:Gitsigns toggle_linehl`
-  word_diff  = true, -- Toggle with `:Gitsigns toggle_word_diff`
+  linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
+  word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
   watch_gitdir = {
     interval = 1000,
     follow_files = true

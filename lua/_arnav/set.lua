@@ -1,7 +1,6 @@
 -- ///////////////////////
 -- Vim Settings
-vim.g.cursor = ""
-vim.opt.guicursor = "n-v-c-i:block"
+--vim.opt.guicursor = "n-v-c-i:block"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'

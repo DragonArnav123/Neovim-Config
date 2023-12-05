@@ -1,5 +1,5 @@
-function ColorMyPencils(color)
-	color = color or "gruvbox"
+function color_my_pencils(color)
+	color = color or "onedark"
 
 	vim.g.gruvbox_contrast_dark = "hard";
 	vim.g.gruvbox_italicize_comments = 1;
@@ -29,4 +29,4 @@ function ColorMyPencils(color)
 
 end
 
-ColorMyPencils()
+color_my_pencils()

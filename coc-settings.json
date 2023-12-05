@@ -1,6 +1,7 @@
 {
   "snippets.ultisnips.pythonPrompt": false,
 	"clangd.enabled": true,
+	"diagnostic.virtualText": true,
 	"diagnostic.checkCurrentLine": true,
 	"diagnostic.virtualTextAlign": "after",
 	"diagnostic.virtualTextCurrentLineOnly": false,
@@ -10,5 +11,9 @@
 			"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
 			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
 		}
-	}
+	},
+	"python.autoComplete.addBrackets": true,
+	"clangd.arguments": ["-std=c++20"],
+	"cmake.lsp.enable": true,
+	"snippets.ultisnips.enable": false
 }
